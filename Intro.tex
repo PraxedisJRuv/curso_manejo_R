@@ -83,7 +83,7 @@
 \begin{frame}{Notas sobre R}
     \begin{itemize}
         \item R nació en 1992, la documentación previa es propiamente de S (sigue siendo útil)
-        \item La mayoría de documentos sobre el uso y manejo a nivel sistema están pensados para UNIX, pero hay "traducciones" a Windows y Mac
+        \item La mayoría de documentos sobre el uso y manejo a nivel sistema están pensados para UNIX, pero hay 'traducciones' a Windows y Mac
         \item Se va a intentar cubrir todo lo posible con R base, pero se recomiendan y usarán algunas librerías CRAN
     \end{itemize}
 \end{frame}
@@ -92,6 +92,7 @@
     \begin{itemize}
         \item Mantener estructuras de carpetas simple y consistente
         \item Siempre trabajar dentro de R Projects, separados propiamente
+        \item Nombrar correctamente las variables
         \item Comentar y documentar lo mayor posible. Especialmente en limpieza de datos y elección de métodos
         \item Usar las librerías explícitamente y evitar importacion directa.
         \item Tener scripts en orden apropiado de corrida.
@@ -103,7 +104,7 @@
     Al presentarse dudas o errores, ¿qué debería hacerse?
     \begin{enumerate}
         \item Leer documentación o autodocumentación
-        \item "probar" y "moverle"
+        \item 'probar' y 'moverle'
         \item Preguntar a alguien
         \item Preguntar a la IA
     \end{enumerate}
@@ -114,16 +115,16 @@
 \begin{frame}{Algunas convenciones de lenguaje}
     Los datos "nulos" pueden presentarse de varias formas según el tipo de falta
     \begin{itemize}
-        \item NA   -> datos faltantes
-        \item NaN  -> not a number
-        \item NULL -> Ausencia de valor
+        \item NA   $->$ datos faltantes
+        \item NaN  $->$ not a number
+        \item NULL $->$ Ausencia de valor
     \end{itemize}
 \end{frame}
 
 \begin{frame}{Algunas convenciones del lenguaje}
     \begin{itemize}
-        \item Procurar usar la asignación "<-"
-        \item Para escribir strings/char usar dobles comillas "char"
+        \item Procurar usar la asignación "$<-$"
+        \item Para escribir strings/char usar dobles comillas ''char''
         \item La indexación comienza en 1
     \end{itemize}  
 \end{frame}
@@ -131,7 +132,7 @@
 \begin{frame}{Salvavidas}
     \begin{itemize}
         \item Recordar al inicio y al final de todo proyecto, usar el comando \textit{SessionInfo()}
-        \item El mayor salvavidas para acceder a documentación de cualquien función \textit{func} es \textit{?func} y \textit{??func}
+        \item El mayor salvavidas para acceder a documentación de cualquien función \textit{function} es \textit{?function} y \textit{??function}
     \end{itemize}
 
 \end{frame}
