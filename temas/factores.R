@@ -1,0 +1,3 @@
+#Declaración de un factor. Levels y otros parámetros
+
+#Importancia del orden
