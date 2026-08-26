@@ -73,11 +73,11 @@
         \begin{tabular}{|c|p{11cm}|}
             \hline
             \textbf{Tipo de dato} & \textbf{Característica} \\ \hline
-            Vector & Guarda los datos de un mismo tipo. Se le aplican la mayoría de funciones a nivel operativo. \\
-            Factor & Para categorías y contruir datos categóricos \\
-            DataFrame & Conjunto de datos, la manera estándar de operar la 'data' \\ 
-            Table & Mayormente utilizada para frecuencias, dependiente de las categorías \\
-            Lists & Guardar datos de varios tipos distintos \\
+            Vector & Guarda los datos de un mismo tipo. Se le aplican la mayoría de funciones a nivel operativo. \\ \hline
+            Factor & Para categorías y contruir datos categóricos \\ \hline
+            DataFrame & Conjunto de datos, la manera estándar de operar la 'data' \\ \hline
+            Table & Mayormente utilizada para frecuencias, dependiente de las categorías \\ \hline
+            Lists & Guardar datos de varios tipos distintos \\ \hline
             Matrix & Un herramienta de manejo de datos a nivel tensorial \\
             \hline
         \end{tabular}
@@ -91,12 +91,13 @@
         \begin{tabular}{|c|p{11cm}|}
             \hline
             \textbf{Comando} & \textbf{Funcionalidad} \\ \hline
-            SessionInfo() & Brinda los detalles completo de lo que se está utilizando \\
-            ?\textit{función} & Muestra la documentación interna sobre \textit{función} \\
-            ??\textit{función} & Muestra todas las funciones con nombres similares o dónde aparezca menionada \textit{función} \\
-            typeof() & Descripe el tipo de dato o variable \\
-
-            \hline
+            SessionInfo() & Brinda los detalles completo de lo que se está utilizando \\ \hline
+            ?\textit{función} & Muestra la documentación interna sobre \textit{función} \\ \hline
+            ??\textit{función} & Muestra todas las funciones con nombres similares o dónde 
+                                aparezca menionada \textit{función} \\ \hline
+            typeof() & Descripe el tipo de dato o variable \\ \hline
+            as.\textit{type}() & Modifica el tipo de variable al indicado según \textit{type} \\ \hline
+            summary() & Da un resumen de las características de una varibale\\ \hline
         \end{tabular}
     \end{center}
 
@@ -108,9 +109,12 @@
         \begin{tabular}{|c|p{9cm}|}
             \hline
             \textbf{Comando} & \textbf{Funcionalidad} \\ \hline
-            rbind(df,otro\_df) & A df le concatena otro\_df \\
-            duplicated(df) & Obtiene un vector booleano de qué renglones son duplicados \\
-            order(df \texttt{\char36} columna) & Obtiene un vector con el orden de las filas según una columna \\ 
+            rbind(\textit{df},\textit{otro\_df}) & A \textit{df} le concatena \textit{otro\_df} \\ \hline
+            duplicated(df) & Obtiene un vector booleano de qué renglones son duplicados \\ \hline
+            order(df\$columna) & Obtiene un vector con el orden de las filas según una columna \\ \hline
+            subset(data, condición) & Filtra de los datos que cumplean con la condición especificada \\ \hline
+            tapply(v1,v2,\textit{función}) & Aplica la \textit{función} al v1 por cada v2. Especialmente útil cuando v1, 
+                                            es un dato númerico y v2 una categoría \\
             \hline
         \end{tabular}
     \end{center}

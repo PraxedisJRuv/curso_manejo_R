@@ -4,3 +4,6 @@
 
 #Comandos importantes para dataframe
 
+#Existencia de read.formato()
+
+#readxl para lectura de documentos excel
