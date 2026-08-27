@@ -1,0 +1,81 @@
+\documentclass[aspectratio=169,xcolor=dvipsnames]{beamer}
+\usetheme{SimpleDarkBlue}
+\usepackage{hyperref}
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{caption}
+\usepackage{adjustbox}
+\usepackage{amssymb}
+\usepackage{tcolorbox}
+\usepackage{amsmath}
+
+\graphicspath{{./graficas}} 
+
+\title{Estadística aplicada}
+\subtitle{Conceptos previos: conjuntos, funciones, cálculo y probabilidad}
+
+\author{Práxedis Jiménez Ruvalcaba}
+
+\institute
+{
+
+}
+\date{\today}
+
+\tcbuselibrary{theorems}
+
+% Custom colored theorem box
+\newtcbtheorem{mytheo}{Teorema}%
+{colback=orange!5!white,colframe=orange!75!black,fonttitle=\bfseries}{th}
+
+\begin{document}
+
+\begin{frame}[c]
+    \begin{beamercolorbox}[sep=8pt,center,rounded=true,shadow=true]{title}
+        \usebeamerfont{title}\inserttitle\par
+        \ifx\insertsubtitle\@empty
+        \else
+          \vskip0.25em
+          {\usebeamerfont{subtitle}\insertsubtitle\par}
+        \fi 
+    \end{beamercolorbox}
+
+    \vspace{1cm}
+    \begin{center}
+        \usebeamerfont{author}\insertauthor\par
+        \vspace{0.5cm}
+        \usebeamerfont{institute}\insertinstitute\par
+        \usebeamerfont{date}\insertdate
+    \end{center}
+    
+\end{frame}
+
+\section{Modelado de Regresión}
+    \begin{frame}[fragile]{Regresión lineal}
+        Si se tiene un vector de datos observables \textit{x} y uno de variables respuestas \textit{y}, entonces
+        \begin{verbatim}
+            y ~ x
+            y ~ 0 + x
+        \end{verbatim}
+        Definen un modelo lineal simple, el primero con interessción y el segundo sin. Si se busca 
+        obtener la logarítmica, entonces
+        \begin{verbatim}
+            log(y) ~ x
+        \end{verbatim}
+    \end{frame}
+
+    \begin{frame}[fragile]{Otras regresiones}
+        Para regresiones multivariadas, el operador + añade variables predictoras a la construcción de un modelo
+        \begin{verbatim}
+            y ~ x_1 + x_2 + ... + x_n
+        \end{verbatim}
+        Para regresiones curvas, podemos definir un modelo polinomial con
+        \begin{verbatim}
+            y ~ poly(x, grado)
+        \end{verbatim}
+    \end{frame}
+\end{document}
