@@ -2,7 +2,7 @@
 
 #Operabilidad del vector
 
-#Filtrado de datos en un vector. Uso de condiciones.
+#Filtrado de datos en un vector [r] y [r:k]. Uso de condiciones. Uso de any(), all().
 
 #Recordar summary() y fivenum()
 
