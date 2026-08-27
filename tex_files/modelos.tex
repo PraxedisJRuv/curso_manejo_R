@@ -16,7 +16,7 @@
 \graphicspath{{./graficas}} 
 
 \title{Estadística aplicada con R}
-\subtitle{Modelos de varianza y predicción, para análisis de varianza y regresión}
+\subtitle{Modelos para análisis de varianza y regresión}
 
 \author{Práxedis Jiménez Ruvalcaba}
 
@@ -81,5 +81,24 @@
         %La notación para esto es y ~ X + poly(x, grado)
     \end{frame}
 
-    
+\section{Modelos de anova}
+    \begin{frame}[fragile]{Modelos para ANOVA}
+        El consenso práctico es tener una dataframe \textit{df} con la variable respuesta como dato númerico
+        y los tratamientos como variables de tipo factor. Las columnas de variables factor, pueden ser 
+        entendidas como tratamientos u efectos de bloqueo.
+        \begin{verbatim}
+            df$respuesta ~ df$tratamiento
+        \end{verbatim}
+        La primer columna es el tramiento, se pueden añadir efectos de bloqueo con el operador +
+        \begin{verbatim}
+            df$respuesta ~ df$trat + df$bloq1 + ... + df$bloq2
+        \end{verbatim}
+    \end{frame}
+
+    \begin{frame}[fragile]{Modelos para ANOVA}
+    El operador * sirve para añadir tratamientos. Primero deben ir los * y después los +
+    \begin{verbatim}
+            df$respuesta ~ df$trat1 * df$trat2
+        \end{verbatim}
+    \end{frame}
 \end{document}
