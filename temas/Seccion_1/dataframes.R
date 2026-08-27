@@ -4,7 +4,7 @@
 
 #Declaración de un dataframe, data.frame. Añadido con listas
 
-#Filtrado de un dataframe. df[x,] y df[,x]. df$columna
+#Filtrado de un dataframe. df[x,] y df[,x]. df$columna. Uso de ifelse()
 
 #Comandos importantes para dataframe
 

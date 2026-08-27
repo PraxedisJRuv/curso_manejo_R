@@ -1,0 +1,1 @@
+#Uso de funciones basadas en momentos, mean(), sd()
