@@ -6,4 +6,6 @@
 
 #Uso de step()
 
+#cor.test()
+
 #Mención de todas las alternativas
