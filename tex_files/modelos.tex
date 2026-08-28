@@ -93,12 +93,29 @@
         \begin{verbatim}
             df$respuesta ~ df$trat + df$bloq1 + ... + df$bloq2
         \end{verbatim}
+        Para bloques desbalanceados son necesarias las librerías lme4 para el modelo y car para p-valor
     \end{frame}
 
     \begin{frame}[fragile]{Modelos para ANOVA}
-    El operador * sirve para añadir tratamientos. Primero deben ir los * y después los +
-    \begin{verbatim}
+        El operador * sirve para añadir tratamientos. Primero deben ir los * y después los +
+        \begin{verbatim}
             df$respuesta ~ df$trat1 * df$trat2
         \end{verbatim}
+        Si solo se busca revisar efectos individuales y los efectos de interescción en pares, para
+        un diseño factorial, se puede usar la notación
+        \begin{verbatim}
+            y ~ (trat1 + trat2 + ... + tratn)^2
+        \end{verbatim}
     \end{frame}
+
+    \section{Otras opciones de modelos}
+    \begin{frame}{Más opciones de modelos}
+        Existen opciones adicionales para los modelos a parte de los \textit{lm()}. Nativamente
+        R tiene los modelos lineales generalizados \textit{glm()}, además R tiene el paquete nlme
+        para construir modelos con máxima verosímilitud \textit{lme()} y de efectos mixtos \textit{nlme()}.
+        Y la librería stats, con modelos \textit{loess()} para regresiones no paramétricas.
+        \\
+        Para regresiones robustas, aditivas o basadas en árboles, hay que añadir librerías adicionales.
+    \end{frame}
+
 \end{document}
