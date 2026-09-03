@@ -1,0 +1,133 @@
+\documentclass[aspectratio=169,xcolor=dvipsnames]{beamer}
+\usetheme{SimpleDarkBlue}
+\usepackage{hyperref}
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{caption}
+\usepackage{adjustbox}
+\usepackage{amssymb}
+\usepackage{tcolorbox}
+\usepackage{amsmath}
+
+\graphicspath{{./graficas}} 
+
+\title{Estadística aplicada con R}
+\subtitle{Rmarkdown}
+
+\author{Práxedis Jiménez Ruvalcaba}
+
+\institute
+{
+
+}
+\date{\today}
+
+\tcbuselibrary{theorems}
+
+% Custom colored theorem box
+\newtcbtheorem{mytheo}{Teorema}%
+{colback=orange!5!white,colframe=orange!75!black,fonttitle=\bfseries}{th}
+
+\begin{document}
+
+\begin{frame}[c]
+    \begin{beamercolorbox}[sep=8pt,center,rounded=true,shadow=true]{title}
+        \usebeamerfont{title}\inserttitle\par
+        \ifx\insertsubtitle\@empty
+        \else
+          \vskip0.25em
+          {\usebeamerfont{subtitle}\insertsubtitle\par}
+        \fi 
+    \end{beamercolorbox}
+
+    \vspace{1cm}
+    \begin{center}
+        \usebeamerfont{author}\insertauthor\par
+        \vspace{0.5cm}
+        \usebeamerfont{institute}\insertinstitute\par
+        \usebeamerfont{date}\insertdate
+    \end{center}
+    
+\end{frame}
+
+\begin{frame}{¿Qué es rmarkdown?}
+    \begin{block}{Lenguaje de marcado}
+        Sistema de anotación que usa etiquetas para organizar y dar estructura a un documentos digitales, como pudieran
+        ser datos (XML), páginas web (HTML), textos legibles con formato sencillo (Markdown), textos y presentaciones 
+        con formatos complejos (Latex), etc.
+    \end{block}
+\end{frame}
+
+\begin{frame}{Notas de uso de Rmarkdown}
+    \begin{itemize}
+        \item Para generar un archivo rmarkdown, hay que crear un archivo .Rmd
+        \item R studio tiene integrado una guía de rmarkdown, a través de la sección \textit{help}.
+        \item Cuenta con soporte nativo par exportación de \textit{html}, pero con paquetes puede exportarse como \textit{pdf} o \textit{word}
+        \item Recordar parámetro \textit{r, echo = FALSE}, para no mostrar código. Si es lo que se busca.
+        \item La sintáxis es prácticamente a Markdown usual, excepto por el código dinámico.
+        \item Archivos markdown no toman las variables globales. 
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Código dinámico}
+    Para añdir código y resultados en un bloque, se usa:
+    \begin{verbatim}
+        ```{r, echo = TRUE}
+            código de R
+        ```
+    \end{verbatim}
+    Para añadir resultados de código de manera narrativa, se puede escribir
+    \begin{verbatim}
+        Tuvimos `r nrow(data)` casos en cuenta.
+    \end{verbatim}
+    Sin r, se interpreta como un bloque de código genérico (formato verbatim).
+\end{frame}
+
+\begin{frame}{Símbolos más usados}
+    \begin{tabular}{|c|p{8cm}|}
+            \hline
+            \textbf{Símbolo} & \textbf{Uso} \\ \hline
+            \# & \# Título principal, \#\# Título, \#\#\# Subtítulo \\ \hline
+            * * & *itálica*, **negrita** \\ \hline
+            * & * ítem de lista \\ \hline
+            1. & 1. ítem numerado \\ \hline
+            - & más de 3 ----, representan un salto de página\\ \hline
+            \$ & \$ecuación\$, \$\$ecuación en bloque\$\$ \\ \hline       
+    \end{tabular}
+\end{frame}
+
+\begin{frame}{Añadido de tablas}
+    Para representar tabla se usa lo siguiente. Se añaden columnas manteniendo consistencia.
+    \begin{verbatim}
+        
+        Primer encabezado  | Segundo encabezado
+
+        ------------- | -------------
+
+        contenido de celda  | contenido de celda
+
+        contenido de celda  | contenido de celda
+    \end{verbatim}
+\end{frame}
+
+\begin{frame}[fragile]{Referencias e imágenes}
+    Para añadir un link a una frase y que quedé como referencia, se usa normalmente
+    \begin{verbatim}
+        [frase][id]. 
+
+        --al final del documento--
+        [id]: http://example.com/ "Título"
+    \end{verbatim}
+    Para añadir una imagen con una referencia, se utiliza.
+    \begin{verbatim}
+        ![alt text][id]
+
+        --al final del documento--
+        [id]: figures/img.png "Title"
+    \end{verbatim}
+\end{frame}
+\end{document}
